@@ -2,14 +2,14 @@
 %global sum Query metadata from sdists / bdists / installed packages
 
 Name:           python-%{srcname}
-Version:        1.3.2
+Version:        1.4.2
 Release:        1%{?dist}
 Summary:        %{sum}
 
 # License is missing from the source repo: see https://bugs.launchpad.net/pkginfo/+bug/1591344
 License:        Python
 URL:            https://pypi.python.org/pypi/%{srcname}
-Source0:        https://pypi.python.org/packages/bc/3e/046ec2439e233161f99d2f6cceb1ac49176612b6f6250cd6cb9919cda97a/pkginfo-1.3.2.tar.gz
+Source0:        https://pypi.python.org/packages/39/c9/111ececbeed8e69cd1b6bec79a32a0b0f6074038a4244e58e285ad278248/pkginfo-1.4.2.tar.gz
 # Upstream installs the test package, and we don't need to distribute that.
 Patch0:         0001-Stop-installing-the-test-package.patch
 
@@ -87,5 +87,8 @@ ln -s %{_bindir}/pkginfo-2.7 %{buildroot}%{_bindir}/pkginfo-2
 %doc docs/.build/html/*
 
 %changelog
+* Wed Apr 04 2018 Tristan Cacqueray <tdecacqu@redhat.com> - 1.4.2-1
+- Bump to 1.4.2 release
+
 * Thu Jun 09 2016 Jeremy Cline <jeremy@jcline.org> - 1.6.5-1
 - Initial commit
